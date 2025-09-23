@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+
 import logo from "../assets/logo.png"
 import { variable } from '../constante'
 
@@ -132,11 +133,18 @@ export default function NavBar() {
     }
 
     const menuItems = [
-        { id: 'acceuil', label: 'Accueil', font: 'Lato' },
-        { id: 'a_propos', label: 'A Propos', font: 'Lato' },
-        { id: 'services', label: 'Nos Services', font: 'Lato' },
-        { id: 'contact', label: 'Contactez Nous', font: 'Lato' }
-    ]
+        { id: 'acceuil', label: 'Accueil', font: 'Lato', href: '#top' },
+        { id: 'a_propos', label: 'A Propos', font: 'Lato', href: '/#propos' },
+        { id: 'services', label: 'Nos Services', font: 'Lato', href: '#solution' },
+        { id: 'contact', label: 'Contactez Nous', font: 'Lato', href: '#contact' }
+    ];
+
+    // const menuItems = [
+    //     { id: 'acceuil', label: 'Accueil', font: 'Lato' },
+    //     { id: 'a_propos', label: 'A Propos', font: 'Lato' },
+    //     { id: 'services', label: 'Nos Services', font: 'Lato' },
+    //     { id: 'contact', label: 'Contactez Nous', font: 'Lato' }
+    // ]
 
     const handleMenuItemClick = (itemId) => {
         setActive(itemId)
@@ -144,7 +152,7 @@ export default function NavBar() {
     }
 
     return (
-        <div className="w-full  md:w-[68%] md:mx-[80px] h-auto md:h-[120px] pt-4 md:pt-[60px] bg-purple-5 sticky " >
+        <div className="w-full md:w-[68%] md:mx-[80px]  pt-4 md:pt-[20px] bg-purple-0" >
             {/* Container principal */}
             <div className="flex flex-row justify-between items-center md:justify-start md:gap-x-[135px]">
                 
@@ -163,6 +171,7 @@ export default function NavBar() {
                     {menuItems.map((item, index) => (
                         <motion.div 
                             key={item.id}
+                            href={item.href}
                             className='text-2xl cursor-pointer relative'
                             style={{ fontFamily: item.font , fontWeight:"bold", color:variable.primaire}}
                             variants={navItemVariants}
@@ -240,6 +249,7 @@ export default function NavBar() {
                             {menuItems.map((item, index) => (
                                 <motion.div
                                     key={item.id}
+                                    href={item.href}
                                     className="text-xl cursor-pointer relative py-2"
                                     style={{ fontFamily: item.font }}
                                     variants={mobileItemVariants}
