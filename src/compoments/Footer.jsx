@@ -68,7 +68,7 @@ const Footer = () => {
 
           {/* Services */}
           <div>
-            <h4 className="text-[#D9E4FF] font-semibold mb-4">Fonctionnalités</h4>
+            <h4 className="text-[#D9E4FF] font-semibold mb-4">Services</h4>
             <ul className="space-y-2 text-white/80">
               <li><a href="#" style={{ fontSize: 18, color: variable.white}} className="text-white">Service après vente</a></li>
               <li><a href="#" style={{ fontSize: 18, color: variable.white}} className="text-white">Maintenance</a></li>
