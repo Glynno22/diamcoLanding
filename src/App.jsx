@@ -200,7 +200,7 @@ function App() {
         </section>
 
         <section id="contact">
-          {/*<ContactSection/>*/}
+          <ContactSection/>
         </section>
 
         <Footer/>
