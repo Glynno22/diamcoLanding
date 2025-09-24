@@ -139,13 +139,6 @@ export default function NavBar() {
         { id: 'contact', label: 'Contactez Nous', font: 'Lato', href: '#contact' }
     ];
 
-    // const menuItems = [
-    //     { id: 'acceuil', label: 'Accueil', font: 'Lato' },
-    //     { id: 'a_propos', label: 'A Propos', font: 'Lato' },
-    //     { id: 'services', label: 'Nos Services', font: 'Lato' },
-    //     { id: 'contact', label: 'Contactez Nous', font: 'Lato' }
-    // ]
-
     const handleMenuItemClick = (itemId) => {
         setActive(itemId)
         setIsMenuOpen(false) // Fermer le menu mobile après sélection

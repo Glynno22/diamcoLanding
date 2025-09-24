@@ -126,7 +126,7 @@ function App() {
                 color: variable.secondaire
               }}
             >
-              <img src={Group} alt="" /> 
+              {/* <img src={Group} alt="" />  */}
               <span>Visionnez une demo</span>
             </button>
           </div>
@@ -151,11 +151,9 @@ function App() {
               </div>
               <div className='flex flex-wrap items-center gap-2'>
                 <img src={orange} alt="" className="h-8" />
-                <img src={eau} alt="" className="h-8" />
+                {/* <img src={eau} alt="" className="h-8" /> */}
                 <img src={unicef} alt="" className="h-8" />
-                <img src={bio} alt="" className="h-8" />
-                <img src={agl} alt="" className="h-8 hidden md:block " />
-                <img src={btp} alt="" className="h-8 hidden md:block " />
+                {/* <img src={bio} alt="" className="h-8" /> */}
                 <img src={odc} alt="" className="h-8" />
               </div>
             </div>
