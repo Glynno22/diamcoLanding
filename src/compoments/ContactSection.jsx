@@ -90,7 +90,7 @@ export default function ContactSection() {
           >
             <form className="space-y-6">
               {/* Nom + Prénom */}
-              <div className="grid grid-cols-2 gap-4">
+              <div className="">
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-1">
                     Nom
@@ -101,7 +101,7 @@ export default function ContactSection() {
                     className="w-full border border-gray-300 placeholder:text-black/50 text-black rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-500"
                   />
                 </div>
-                <div>
+                {/* <div>
                   <label className="block text-sm font-medium text-gray-700 mb-1">
                     Prenom
                   </label>
@@ -110,7 +110,7 @@ export default function ContactSection() {
                     placeholder="entrez votre prenom"
                     className="w-full border border-gray-300 placeholder:text-black/50 text-black rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-500"
                   />
-                </div>
+                </div> */}
               </div>
 
               {/* Email */}
@@ -126,7 +126,7 @@ export default function ContactSection() {
               </div>
 
               {/* Ville + Téléphone */}
-              <div className="grid grid-cols-2 gap-4">
+              {/* <div className="grid grid-cols-2 gap-4">
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-1">
                     Ville
@@ -147,7 +147,7 @@ export default function ContactSection() {
                     className="w-full border border-gray-300 placeholder:text-black/50 text-black rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-500"
                   />
                 </div>
-              </div>
+              </div> */}
 
               {/* Message */}
               <div>
