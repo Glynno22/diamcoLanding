@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 
 import logo from "../assets/logo.png"
 import { variable } from '../constante'
+import { Link } from 'react-scroll'
 
 export default function NavBar() {
     const [active, setActive] = useState('acceuil')
@@ -133,8 +134,8 @@ export default function NavBar() {
     }
 
     const menuItems = [
-        { id: 'acceuil', label: 'Accueil', font: 'Lato', href: '#top' },
-        { id: 'a_propos', label: 'A Propos', font: 'Lato', href: '/#propos' },
+        { id: 'acceuil', label: 'Accueil', font: 'Lato', href: '#acceuil' },
+        { id: 'a_propos', label: 'A Propos', font: 'Lato', href: '#apropos' },
         { id: 'services', label: 'Nos Services', font: 'Lato', href: '#solution' },
         { id: 'contact', label: 'Contactez Nous', font: 'Lato', href: '#contact' }
     ];
@@ -145,7 +146,7 @@ export default function NavBar() {
     }
 
     return (
-        <div className="w-full md:w-[68%] md:mx-[80px]  pt-4 md:pt-[20px] bg-purple-0" >
+        <div className="w-full md:w-[68%] md:mx-[80px]  pt-4 md:pt-[20px] bg-purple-0 sticky" >
             {/* Container principal */}
             <div className="flex flex-row justify-between items-center md:justify-start md:gap-x-[135px]">
                 
@@ -161,7 +162,7 @@ export default function NavBar() {
 
                 {/* Menu Desktop */}
                 <div className="hidden md:grid grid-flow-col auto-cols-max gap-x-13">
-                    {menuItems.map((item, index) => (
+                    {/* {menuItems.map((item, index) => (
                         <motion.div 
                             key={item.id}
                             href={item.href}
@@ -203,7 +204,55 @@ export default function NavBar() {
                                 transition={{ duration: 0.2 }}
                             />
                         </motion.div>
+                    ))} */}
+                    {menuItems.map((item, index) => (
+                        <Link 
+                            key={item.id}
+                            to={item.id} // correspond à l'id de ta section
+                            smooth={true}
+                            duration={500}
+                            offset={-80} // ajuste si ta navbar est fixe
+                            onClick={() => setActive(item.id)}
+                        >
+                            <motion.div 
+                                className='text-2xl cursor-pointer relative'
+                                style={{ fontFamily: item.font , fontWeight:"bold", color:variable.primaire}}
+                                variants={navItemVariants}
+                                animate={active === item.id ? 'active' : 'inactive'}
+                                whileHover={{scale:1.1, transition:{duration:0.1}}}
+                                initial={{ opacity: 0, x: -20 }}
+                                animate={{ opacity: 1, x: 0 }}
+                                transition={{ 
+                                    delay: (index+1) * 0.5, 
+                                    duration: 0.3,
+                                    ease: "easeOut"
+                                }}
+                            >
+                                <motion.p variants={hoverVariants}>
+                                    {item.label}
+                                </motion.p>
+                                <AnimatePresence>
+                                    {active === item.id && (
+                                        <motion.hr 
+                                            className='mt-2 border-2 rounded-4x'
+                                            variants={underlineVariants}
+                                            initial="hidden"
+                                            animate="visible"
+                                            exit="hidden"
+                                            style={{ originX: 0.5 }}
+                                        />
+                                    )}
+                                </AnimatePresence>
+                                <motion.div
+                                    className="absolute inset-0 bg-green-100 rounded-lg -z-10"
+                                    initial={{ opacity: 0 }}
+                                    whileHover={{ opacity: 0.1 }}
+                                    transition={{ duration: 0.2 }}
+                                />
+                            </motion.div>
+                        </Link>
                     ))}
+
                 </div>
 
                 {/* Bouton Hamburger Mobile */}
