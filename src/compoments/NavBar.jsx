@@ -162,7 +162,7 @@ export default function NavBar() {
                 {/* Menu Desktop */}
                 <div className="hidden md:grid grid-flow-col auto-cols-max gap-x-13">
                     {menuItems.map((item, index) => (
-                        <motion.div 
+                        <motion.a 
                             key={item.id}
                             href={item.href}
                             className='text-2xl cursor-pointer relative'
@@ -202,27 +202,28 @@ export default function NavBar() {
                                 whileHover={{ opacity: 0.1 }}
                                 transition={{ duration: 0.2 }}
                             />
-                        </motion.div>
+                        </motion.a>
                     ))}
                 </div>
 
                 {/* Bouton Hamburger Mobile */}
                 <motion.button
                     className="md:hidden flex flex-col justify-center items-center w-8 h-8 space-y-1"
+                    style={{ backgroundColor: variable.primaire, borderRadius: 8 }}
                     onClick={() => setIsMenuOpen(!isMenuOpen)}
                     animate={isMenuOpen ? "open" : "closed"}
                     whileTap={{ scale: 0.9 }}
                 >
                     <motion.span
-                        className="w-6 h-0.5 bg-black block"
+                        className="w-6 h-0.5 bg-white block"
                         variants={{...hamburgerLineVariants, ...topLineVariants}}
                     />
                     <motion.span
-                        className="w-6 h-0.5 bg-black block"
+                        className="w-6 h-0.5 bg-white block"
                         variants={{...hamburgerLineVariants, ...middleLineVariants}}
                     />
                     <motion.span
-                        className="w-6 h-0.5 bg-black block"
+                        className="w-6 h-0.5 bg-white block"
                         variants={{...hamburgerLineVariants, ...bottomLineVariants}}
                     />
                 </motion.button>
@@ -233,6 +234,7 @@ export default function NavBar() {
                 {isMenuOpen && (
                     <motion.div
                         className="md:hidden mt-4 bg-white shadow-lg rounded-lg overflow-hidden"
+                        style={{ backgroundColor: variable.primaire }}
                         variants={mobileMenuVariants}
                         initial="closed"
                         animate="open"
@@ -240,7 +242,7 @@ export default function NavBar() {
                     >
                         <div className="py-4 px-6 space-y-4">
                             {menuItems.map((item, index) => (
-                                <motion.div
+                                <motion.a
                                     key={item.id}
                                     href={item.href}
                                     className="text-xl cursor-pointer relative py-2"
@@ -254,7 +256,7 @@ export default function NavBar() {
                                     whileTap={{ scale: 0.95 }}
                                 >
                                     <motion.p
-                                        className={`${active === item.id ? 'text-green-600 font-bold' : 'text-gray-800'} transition-colors`}
+                                        className={`${active === item.id ? ' font-bold text-[#008BBB]' : 'text-white'} transition-colors`}
                                     >
                                         {item.label}
                                     </motion.p>
@@ -262,7 +264,8 @@ export default function NavBar() {
                                     {/* Indicateur actif pour mobile */}
                                     {active === item.id && (
                                         <motion.div
-                                            className="absolute left-0 top-0 bottom-0 w-1 bg-green-600 rounded-r"
+                                            className="absolute left-0 top-0 bottom-0 w-1  rounded-r "
+                                            style={{ backgroundColor: variable.secondaire }}
                                             layoutId="mobileActiveIndicator"
                                             transition={{ duration: 0.3, ease: "easeInOut" }}
                                         />
@@ -276,7 +279,7 @@ export default function NavBar() {
                                         whileTap={{ opacity: 0.3 }}
                                         transition={{ duration: 0.2 }}
                                     />
-                                </motion.div>
+                                </motion.a>
                             ))}
                         </div>
                     </motion.div>
@@ -287,9 +290,10 @@ export default function NavBar() {
             <AnimatePresence>
                 {isMenuOpen && (
                     <motion.div
-                        className="md:hidden fixed inset-0 bg-black bg-opacity-20 z-[-1]"
+                        className="md:hidden fixed inset-0 bg-white bg-opacity-20 z-[-1]"
+                        // style={{ backgroundColor: variable.primaire, opacity: 0.5 }}
                         initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
+                        animate={{ opacity: 0.6 }}
                         exit={{ opacity: 0 }}
                         onClick={() => setIsMenuOpen(false)}
                     />

@@ -58,7 +58,7 @@ function App() {
     <div className="w-full overflow-x-hidden bg-white">
       {/* Section principale */}
       <div className="bg-white flex min-h-screen w-full">
-        {/* NavBar fixe */}
+
         <div className='absolute top-0 left-0 right-0  bg-amber-10 z-10'>
           <NavBar/>
         </div>
@@ -112,14 +112,14 @@ function App() {
           </div>
 
           <div className='mt-5 w-full flex flex-col sm:flex-row items-start sm:items-center gap-4'>
-            <button 
-              className='px-6 py-3 text-white rounded-full'
-              style={{ backgroundColor: variable.secondaire }}
+            <a 
+              className='px-6 py-3 text-white rounded-full' href="#contact"
+              style={{ backgroundColor: variable.secondaire, color: "white", textDecoration: "none" }}
             >
               Commandez un dispositif
-            </button>
-            <button 
-              className='px-6 py-3 border rounded-full flex items-center gap-2'
+            </a>
+            <a 
+              className='px-6 py-3 border rounded-full flex items-center gap-2' href="#nouveau"
               style={{
                 backgroundColor: "white",
                 borderColor: variable.secondaire, 
@@ -128,12 +128,12 @@ function App() {
             >
               {/* <img src={Group} alt="" />  */}
               <span>Visionnez une demo</span>
-            </button>
+            </a>
           </div>
 
           <div className='mt-5'> 
             <a 
-              href="" 
+              href="#solution" 
               style={{
                 scrollBehavior: "smooth", 
                 textDecoration: "underline", 
@@ -162,7 +162,7 @@ function App() {
 
         {/* Image de fond - uniquement sur desktop */}
         {width >= 950 && (
-          <motion.div 
+          <motion.div
             key={currentIndex} // permet l’animation quand l’image change
             className='flex-1 h-screen bg-no-repeat bg-cover'
             style={{
@@ -177,7 +177,7 @@ function App() {
         )}
       </div>
 
-      {/* Contenu additionnel - maintenant dans le flux normal */}
+      {/* Autres sections */}
       <div className="w-full">
         <section id="solution">
           <NotreSolution />

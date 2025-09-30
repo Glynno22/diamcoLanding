@@ -10,7 +10,7 @@ const PourquoiDiamco = () => {
     <section className="py-20 mt-20 px-6 lg:px-20 flex flex-col justify-center">
       <div className="text-center mb-12">
         <p className="text-gray-500 uppercase tracking-wider text-sm mb-4">
-          Nos Avantages
+          Nos services
         </p>
         <h2 className="text-4xl lg:text-5xl font-bold text-slate-800 mb-16">
           Pourquoi Diamco ?

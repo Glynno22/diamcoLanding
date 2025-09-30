@@ -125,30 +125,6 @@ export default function ContactSection() {
                 />
               </div>
 
-              {/* Ville + Téléphone */}
-              {/* <div className="grid grid-cols-2 gap-4">
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">
-                    Ville
-                  </label>
-                  <input
-                    type="text"
-                    placeholder="entrez votre ville"
-                    className="w-full border border-gray-300 placeholder:text-black/50 text-black rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-500"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">
-                    Phone
-                  </label>
-                  <input
-                    type="tel"
-                    placeholder="entrez votre numero"
-                    className="w-full border border-gray-300 placeholder:text-black/50 text-black rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-500"
-                  />
-                </div>
-              </div> */}
-
               {/* Message */}
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">

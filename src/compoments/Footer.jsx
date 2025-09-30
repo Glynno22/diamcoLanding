@@ -47,24 +47,6 @@ const Footer = () => {
 
         {/* --- Bloc Newsletter + Liens --- */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-16 mb-10">
-          
-          {/* Newsletter */}
-          {/* <div className='relative md:col-span-1 -mr-14'>
-            <h3 className="text-white text-3xl font-semibold mb-4">
-              Souscrivez à notre Newsletter
-            </h3>
-            <div className="flex w-2/3">
-              <input 
-                type="email"
-                placeholder="Email address"
-                className="w-[1000px] py-2  bg-transparent border-b border-b-white/30 text-white placeholder-white/60 focus:outline-none"
-              />
-              <button className="bg-sky-600 px-4 rounded-r-md text-white hover:bg-sky-500 transition"
-              style={{backgroundColor: variable.secondaire, borderRadius:0, borderTopLeftRadius:5, borderTopRightRadius:5}}>
-                &gt;
-              </button>
-            </div>
-          </div> */}
 
           {/* Services */}
           <div>
@@ -81,10 +63,10 @@ const Footer = () => {
           <div>
             <h4 className="text-[#D9E4FF] font-semibold mb-4">À propos</h4>
             <ul className="space-y-2 text-white/80">
-              <li><a href="#" style={{ fontSize: 18, color: variable.white}} className="text-white">À propos de nous</a></li>
+              <li><a href="#propos" style={{ fontSize: 18, color: variable.white}} className="text-white">À propos de nous</a></li>
               <li><a href="#" style={{ fontSize: 18, color: variable.white}} className="text-white">Témoignages</a></li>
               <li><a href="#" style={{ fontSize: 18, color: variable.white}} className="text-white">Notre équipe</a></li>
-              <li><a href="#" style={{ fontSize: 18, color: variable.white}} className="text-white">Contact</a></li>
+              <li><a href="#contact" style={{ fontSize: 18, color: variable.white}} className="text-white">Contact</a></li>
             </ul>
           </div>
 
@@ -93,7 +75,7 @@ const Footer = () => {
             <h4 className="text-[#D9E4FF] font-semibold mb-4">Aide</h4>
             <ul className="space-y-2 text-white">
               <li><a href="#" style={{ fontSize: 18, color: variable.white}} className="text-white">FAQs</a></li>
-              <li><a href="#" style={{ fontSize: 18, color: variable.white}} className="text-white">Contactez nous</a></li>
+              <li><a href="#contact" style={{ fontSize: 18, color: variable.white}} className="text-white">Contactez nous</a></li>
             </ul>
           </div>
         </div>
