@@ -3,8 +3,8 @@ import { motion, AnimatePresence } from 'framer-motion'
 
 import logo from "../assets/logo.png"
 import { variable } from '../constante'
-import { Link } from 'react-scroll'
 
+// import { Link } from 'react-scroll'
 export default function NavBar() {
     const [active, setActive] = useState('acceuil')
     const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -163,7 +163,7 @@ export default function NavBar() {
                 {/* Menu Desktop */}
                 <div className="hidden md:grid grid-flow-col auto-cols-max gap-x-13">
                     {menuItems.map((item, index) => (
-                        <motion.div 
+                        <motion.a 
                             key={item.id}
                             href={item.href}
                             className='text-2xl cursor-pointer relative'
@@ -203,7 +203,7 @@ export default function NavBar() {
                                 whileHover={{ opacity: 0.1 }}
                                 transition={{ duration: 0.2 }}
                             />
-                        </motion.div>
+                        </motion.a>
                     ))}
                 </div>
 

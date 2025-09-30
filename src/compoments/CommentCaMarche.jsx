@@ -11,10 +11,10 @@ import { variable } from '../constante';
 const CommentCaMarche = () => {
   return (
     <section
-      className="py-20 mt-20 bg-white font-sans overflow-hidden"
+      className="py-20 pb-20 bg-white font-sans overflow-hidden"
       style={{ margin: 0, padding: 0 }}
     >
-      <div className="px-4 sm:px-6 lg:px-8 a" style={{ margin: 0, padding: 0 }}>
+      <div className="px-4 sm:px-6 lg:px-8 m-0 md:mb-20" style={{  padding: 0 }}>
         {/* Titre principal */}
         <motion.h2
           initial={{ opacity: 0, y: -40 }}

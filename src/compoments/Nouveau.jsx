@@ -9,7 +9,7 @@ import { variable } from '../constante';
 const Nouveau = () => {
   return (
     <section 
-      className="py-20 mt-20"
+      className="py-20 "
       style={{ backgroundColor: variable.white, fontFamily: "Lato" }}
     >
       <div className="max-w-[95%] md:max-w-[88%] lg:max-w-[80%]  mx-auto px-4 sm:px-6 lg:px-8">

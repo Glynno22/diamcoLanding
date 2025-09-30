@@ -103,7 +103,7 @@ const NotreSolution = () => {
 
   return (
     <section
-      className="min-h-screen py-20 mt-20"
+      className="min-h-screen py-20 "
       style={{ backgroundColor: variable.primaire }}
     >
       <div className="max-w-[95%] md:max-w-[88%] lg:max-w-[80%] mx-auto px-4 sm:px-6 lg:px-8">
@@ -209,7 +209,7 @@ const NotreSolution = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <img src={VectorSavoir} alt="" className="w-10" />
+                <img src={slide.imageIcon} alt="" className="w-10" />
                 <p>
                   <span className="text-white text-lg font-semibold">
                     En savoir plus

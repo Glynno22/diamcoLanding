@@ -7,7 +7,7 @@ const PourquoiDiamco = () => {
   const [activeId, setActiveId] = useState(null);
 
   return (
-    <section className="py-20 mt-20 px-6 lg:px-20 flex flex-col justify-center">
+    <section className="py-20  px-6 lg:px-20 flex flex-col justify-center bg-white">
       <div className="text-center mb-12">
         <p className="text-gray-500 uppercase tracking-wider text-sm mb-4">
           Nos services
