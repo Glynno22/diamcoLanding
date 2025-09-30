@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 
 import logo from "../assets/logo.png"
 import { variable } from '../constante'
+import { Link } from 'react-scroll'
 
 export default function NavBar() {
     const [active, setActive] = useState('acceuil')
@@ -133,8 +134,8 @@ export default function NavBar() {
     }
 
     const menuItems = [
-        { id: 'acceuil', label: 'Accueil', font: 'Lato', href: '#top' },
-        { id: 'a_propos', label: 'A Propos', font: 'Lato', href: '/#propos' },
+        { id: 'acceuil', label: 'Accueil', font: 'Lato', href: '#acceuil' },
+        { id: 'a_propos', label: 'A Propos', font: 'Lato', href: '#apropos' },
         { id: 'services', label: 'Nos Services', font: 'Lato', href: '#solution' },
         { id: 'contact', label: 'Contactez Nous', font: 'Lato', href: '#contact' }
     ];
@@ -145,7 +146,7 @@ export default function NavBar() {
     }
 
     return (
-        <div className="w-full md:w-[68%] md:mx-[80px]  pt-4 md:pt-[20px] bg-purple-0" >
+        <div className="w-full md:w-[68%] md:mx-[80px]  pt-4 md:pt-[20px] bg-purple-0 sticky" >
             {/* Container principal */}
             <div className="flex flex-row justify-between items-center md:justify-start md:gap-x-[135px]">
                 
@@ -162,7 +163,7 @@ export default function NavBar() {
                 {/* Menu Desktop */}
                 <div className="hidden md:grid grid-flow-col auto-cols-max gap-x-13">
                     {menuItems.map((item, index) => (
-                        <motion.a 
+                        <motion.div 
                             key={item.id}
                             href={item.href}
                             className='text-2xl cursor-pointer relative'
@@ -202,7 +203,7 @@ export default function NavBar() {
                                 whileHover={{ opacity: 0.1 }}
                                 transition={{ duration: 0.2 }}
                             />
-                        </motion.a>
+                        </motion.div>
                     ))}
                 </div>
 

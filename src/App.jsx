@@ -1,15 +1,14 @@
 import { useState, useEffect } from 'react';
 import * as motion from "motion/react-client"
-
-import agl from './assets/agl.png'
+// import agl from './assets/agl.png'
 import back from './assets/background.png'
 import back2 from './assets/background2.png'
 import back3 from './assets/background3.png'
 import back4 from './assets/background4.png'
-import bio from './assets/bio.png'
-import btp from './assets/btp.png'
-import eau from './assets/eau.png'
-import Group from './assets/Group.png'
+// import bio from './assets/bio.png'
+// import btp from './assets/btp.png'
+// import eau from './assets/eau.png'
+// import Group from './assets/Group.png'
 import odc from './assets/ODC.png'
 import orange from './assets/orange.png'
 import unicef from './assets/unicef.png'
@@ -55,13 +54,14 @@ function App() {
   }, []);
 
   return (
-    <div className="w-full overflow-x-hidden bg-white">
+    <div className="w-full  overflow-y-scroll ">
+      <div className='absolute top-0 left-0 right-0  bg-transparent z-10'>
+          <NavBar/>
+        </div>
       {/* Section principale */}
       <div className="bg-white flex min-h-screen w-full">
 
-        <div className='absolute top-0 left-0 right-0  bg-amber-10 z-10'>
-          <NavBar/>
-        </div>
+        
 
         {/* Contenu principal */}
         <motion.div 
@@ -191,7 +191,7 @@ function App() {
           <CommentCaMarche />
         </section>
 
-        <section id="propos">
+        <section id="apropos">
           <AProposDeNous />
         </section>
 
