@@ -65,7 +65,7 @@ const Footer = () => {
             <ul className="space-y-2 text-white/80">
               <li><a href="#propos" style={{ fontSize: 18, color: variable.white}} className="text-white">À propos de nous</a></li>
               <li><a href="#" style={{ fontSize: 18, color: variable.white}} className="text-white">Témoignages</a></li>
-              <li><a href="#" style={{ fontSize: 18, color: variable.white}} className="text-white">Notre équipe</a></li>
+              <li><a href="#team" style={{ fontSize: 18, color: variable.white}} className="text-white">Notre équipe</a></li>
               <li><a href="#contact" style={{ fontSize: 18, color: variable.white}} className="text-white">Contact</a></li>
             </ul>
           </div>

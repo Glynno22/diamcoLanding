@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import * as motion from "motion/react-client"
+
 // import agl from './assets/agl.png'
 import back from './assets/background.png'
 import back2 from './assets/background2.png'
@@ -15,11 +16,14 @@ import unicef from './assets/unicef.png'
 import AProposDeNous from './compoments/AProposDeNous';
 import CommentCaMarche from './compoments/CommentCaMarche';
 import ContactSection from './compoments/ContactSection';
+import FAQSection from './compoments/FAQSection';
 import Footer from './compoments/Footer';
 import NavBar from './compoments/NavBar'
 import Nouveau from './compoments/Nouveau';
+import PartnersSection from './compoments/PartnersSection';
 import PourquoiDiamco from './compoments/PourquoiDiamco';
 import NotreSolution from './compoments/Solution';
+import TeamCarousel from './compoments/TeamCarousel';
 import { variable } from './constante'
 
 import './App.css'
@@ -65,7 +69,7 @@ function App() {
 
         {/* Contenu principal */}
         <motion.div 
-          className='bg-green-10 flex-1 pt-[80px]'
+          className='bg-green-10 flex-1 pt-32'
           initial={{ opacity: 0, scale: 1.2 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={transition}
@@ -81,10 +85,10 @@ function App() {
         >
           <div className='p-2.5 pl-0'>
             <span
+            className="block font-[Dubai Bold] text-[48px] md:text-[64px] lg:text-[72px] xl:text-[80px] 2xl:text-[90px]"
               style={{
                 fontFamily: "Dubai Bold",
                 color: variable.primaire,
-                fontSize: width >= 950 ? 86 : 48,
                 lineHeight: 0.9,
                 letterSpacing: -0.32,
                 display: "block"
@@ -99,7 +103,7 @@ function App() {
               style={{
                 textAlign: "justify",
                 fontFamily: "Lato",
-                fontSize: width >= 950 ? 27 : 18,
+                fontSize: width >= 950 ? 28 : 18,
                 lineHeight: 0.9,
                 letterSpacing: 0,
                 color: "#0E3643",
@@ -197,6 +201,18 @@ function App() {
 
         <section id="nouveau">
           <Nouveau/>
+        </section>
+
+        <section id="faq">
+          <FAQSection/>
+        </section>
+
+        <section id="team">
+          <TeamCarousel/>
+        </section>
+
+        <section id="partenaires">
+          <PartnersSection/>
         </section>
 
         <section id="contact">

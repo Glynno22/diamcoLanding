@@ -116,7 +116,7 @@ const NotreSolution = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          Notre Solution Diamco
+          Notre Solution
         </motion.h2>
 
         {/* Conteneur principal */}
