@@ -1,32 +1,37 @@
 import React from "react";
 import { motion } from "framer-motion";
 
+import awsLogo from '../assets/aws.png'
+import eyLogo from '../assets/ey.png'
+import meta from '../assets/meta.png'
+import orangeDigitalLogo from '../assets/ODC.png'
+import orangeLogo from '../assets/orange.png'
 import { variable } from "../constante";
 
 const partners = [
   {
     name: "Orange",
-    logo: "/logos/orange.png",
+    logo: orangeLogo,
     url: "https://www.orange.cm",
   },
   {
     name: "Orange Digital Center",
-    logo: "/logos/orange-digital.png",
+    logo: orangeDigitalLogo,
     url: "https://digitalcenter.orange.com",
   },
   {
     name: "EY",
-    logo: "/logos/ey.png",
+    logo: eyLogo,
     url: "https://www.ey.com",
   },
   {
     name: "D. Moukouri & Partners",
-    logo: "/logos/moukouri.png",
-    url: "https://www.uggc.com",
+    logo: meta,
+    url: "https://www.meta.com",
   },
   {
     name: "AWS",
-    logo: "/logos/aws.png",
+    logo: awsLogo,
     url: "https://aws.amazon.com",
   },
 ];
@@ -47,18 +52,15 @@ export default function PartnersSection() {
             style={{
               fontFamily: "Dubai Bold",
               color: "#111",
+              color: variable.primaire,
             }}
             className="text-3xl sm:text-4xl lg:text-5xl font-extrabold"
           >
             Nos{" "}
-            <span style={{ color: variable.primaire }}>
+            <span style={{ color: variable.secondaire }}>
               partenaires
             </span>{" "}
-            nous font confiance
           </h2>
-          <p className="mt-3 text-gray-600 text-lg">
-            Plus de 25,000 utilisateurs et organisations soutiennent Diamco
-          </p>
         </motion.div>
 
         {/* Logos */}
@@ -79,7 +81,7 @@ export default function PartnersSection() {
               <img
                 src={partner.logo}
                 alt={partner.name}
-                className="max-h-14 object-contain"
+                className="max-h-auto object-contain"
               />
             </motion.a>
           ))}

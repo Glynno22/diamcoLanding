@@ -211,9 +211,9 @@ function App() {
           <TeamCarousel/>
         </section>
 
-        <section id="partenaires">
+        {/* <section id="partenaires">
           <PartnersSection/>
-        </section>
+        </section> */}
 
         <section id="contact">
           <ContactSection/>
