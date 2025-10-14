@@ -141,6 +141,7 @@ export default function ContactSection() {
               <div className="flex justify-center">
                 <motion.button
                   type="submit"
+                  action="#"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className="bg-cyan-500 text-white px-5 py-3 rounded-4xl font-medium hover:bg-cyan-600 transition text-center"

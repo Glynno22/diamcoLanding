@@ -63,20 +63,20 @@ const Nouveau = () => {
 
             {/* Boutons Store */}
             <div className="flex space-x-4">
-              <a href="#">
+              <span className='hover:cursor-pointer' >
                 <img 
                   src={AppStore} 
-                  alt="Télécharger sur l'App Store" 
+                  alt="Télécharger sur l'App Store ( bientot disponible )" 
                   className="h-12 md:h-14"
                 />
-              </a>
-              <a href="#">
+              </span>
+              <span className='hover:cursor-pointer' >
                 <img 
                   src={PlayStore} 
-                  alt="Disponible sur Google Play" 
+                  alt="Télécharger sur Google Play ( bientot disponible )" 
                   className="h-12 md:h-14"
                 />
-              </a>
+              </span>
             </div>
           </motion.div>
         </div>
