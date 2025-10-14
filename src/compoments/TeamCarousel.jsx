@@ -44,7 +44,7 @@ const members = [
   {
     name: "GLYNN DONALD BODIE NNOUKIMI",
     role: "Le Développeur Web",
-    desc: "Il bâtit l’univers digital en créant et maintenant des applications et sites web.",
+    desc: "Il bâtit l’univers digital en créant et maintenant des applications et sites web robuste.",
     image: Donald,
   },
 ];
